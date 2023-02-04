@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        
+        float Balance = sc.nextFloat();
+        int choice = sc.nextInt();
+        
+        switch(choice)
+        {
+            case 1:
+                {
+                   float withdrawn = sc.nextFloat();
+                    if(withdrawn>Balance)
+                    {
+                        System.out.print("error");  
+                    }
+                    else
+                    {
+                        Balance -= withdrawn;
+                        System.out.printf("%.2f",Balance);
+                    }
+                    break;
+                }
+            case 2:
+                {
+                    float deposited = sc.nextFloat();
+                    Balance += deposited;
+                    System.out.printf("%.2f",Balance);
+                    break;
+                }
+            case 3:
+                {
+                    System.out.printf("%.2f",Balance);
+                    break;
+                }
+            default:
+                {
+                    System.out.print("error");
+                    break;
+                }
+        }
+            
+    }
+}
